@@ -1,0 +1,113 @@
+📑 Agenda for Week 8 Day 1: Advanced Playwright Interactions
+🎯 Focus: Exploring Advanced Features for Enhanced Playwright Automation
+
+📆 Date: 06 Sep. [Saturday]
+
+⿡ Test Annotations
+
+* Enhancing test readability and control using annotations.
+* Examples: Skipping, focusing, or tagging specific tests.
+
+⿣ Storage State (Skip Login)  
+* Utilizing storage state to bypass login during test execution.  
+* Practical examples: Reducing redundant authentication steps.  
+
+
+⿦  Persistent Context (Non-incognito mode)
+
+* Maintaining login/session state across test runs using user data directories.
+* Real-world example: Avoid repeated logins for authenticated flows.
+
+
+⿥ Visual Regression Testing
+
+* Capturing and comparing UI snapshots to detect unintended changes.
+* Use cases: Ensuring consistent UI across versions and devices.
+
+⿣  Geolocation
+
+* Simulating geolocation data for location-based testing.
+* Practical use cases: Testing location-restricted functionalities.
+
+⿤ Device Emulation
+
+* Emulating various devices and screen resolutions in Playwright.
+* Practical examples: Testing responsive designs and mobile-specific features.
+
+⿧ Codegen (Code Generation)
+
+* Auto-generating Playwright scripts by recording user interactions.
+* Benefits: Faster test creation and onboarding for beginners.
+
+⿥ Network Interception  
+* Mocking and intercepting network requests for targeted testing.  
+* Validating offline or restricted-network scenarios.  
+
+
+🕡 Wrap Up / Q\&A
+
+📝 Keep your physical notebook and pen handy to sketch out ideas!
+
+
+Other Test Annotation
+---
+
+test.only --> focus on a specific test.
+test.skip --> ignore the test from execution
+test.fixme --> track and know failures that are yet tp be fixed
+test.fail --> for negative testing --> test has to fail is the expectation
+test.slow --> double the timeout of the tests execution --> 30 s --> 60 s for the entire test execution
+test.describe --> grouping the test depending on the status of the other test.
+test.use -->use the functionalities
+
+
+
+
+1. What is axios?
+
+- axios is a library.
+-You have to install it separately using npm or yarn. as npm install axios
+A general-purpose HTTP client for Node.js and browsers.
+Works outside of Playwright (you can use it in any JS/TS project).
+Very popular for making API calls.
+
+------------
+
+2. What is Playwright’s request?
+
+A built-in API testing capability inside Playwright.
+No need to install axios.
+Designed to work within Playwright tests (shares the same context, auth, etc.).
+Useful when you want UI + API testing together in one framework.
+It is a built-in feature of the Playwright testing framework (@playwright/test).
+
+
+
+
+| Feature         | axios                                                       | Playwright `request`                                                          |
+| --------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| **Setup**       | Install separately (`npm i axios`)                          | Built into Playwright                                                         |
+| **Use case**    | Any Node.js/JS project (backend, scripts, React, etc.)      | Specifically for API testing inside Playwright tests                          |
+| **Context**     | Works independently, no link to Playwright browser sessions | Can share cookies/auth with Playwright browser (great for end-to-end testing) |
+| **Syntax**      | `axios.get/post/put/delete`                                 | `request.get/post/put/delete`                                                 |
+| **Response**    | `response.data`, `response.status`                          | `await response.json()`, `response.status()`                                  |
+| **Integration** | Great for standalone API scripts (like Jira integration)    | Great when mixing UI + API tests in Playwright                                |
+
+
+
+
+
+
+//purpose of storage state :
+//1. Maintain login/session state across test runs.
+//2. Real-world example: Avoid repeated logins for authenticated flows.
+//3. Useful for debugging with consistent state across sessions.
+//4. Store user preferences and settings persistently.
+
+
+//Purpose of persistent context :  
+//1. Maintain login/session state across test runs.
+//2. Real-world example: Avoid repeated logins for authenticated flows.
+//3. Useful for debugging with consistent state across sessions.
+//4. Store user preferences and settings persistently.
+

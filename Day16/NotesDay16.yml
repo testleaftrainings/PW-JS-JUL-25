@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+
+
+
+
+//Purpose of visual regression testing :
+//1. Detect unintended UI changes in web applications.
+//2. Ensure consistent appearance across different browsers and devices.
+//3. Practical examples: Catching layout shifts, color changes, or missing elements.  
+
+//Purpose of geolocation :
+//1. Simulating geolocation data for location-based testing.
+//2. Testing location-restricted functionalities.
+//3. Practical use cases: Testing location-restricted functionalities.
+//4. Example: Testing location-restricted functionalities.
+
+
+
+//Purpose of device emulation :
+//1. Testing responsive designs and mobile-specific features.
+//2. Simulating various devices and screen resolutions in Playwright.
+//3. Practical examples: Testing responsive designs and mobile-specific features.
+
+Codegen:
+--------
+
+Definition of Codegen in Playwright
+
+- In Playwright, Codegen is a tool that automatically generates test scripts by recording your actions in the browser.
+- It helps beginners quickly create tests without writing code manually.
+- You perform actions (click, type, navigate), and Playwright generates the corresponding code (in JavaScript, TypeScript, Python, C#, or Java).
+- It’s useful for learning locators and bootstrapping test cases.
+
+Codegen command in terminal :
+npx playwright codegen <url>
